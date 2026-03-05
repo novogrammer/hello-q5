@@ -2,16 +2,11 @@ import './style.css'
 
 import "q5";
 
+const q = new Q5("namespace");
 
-
-/**
- * Made with q5!
- * https://q5js.org
- */
-
-await Canvas();
-background(color('silver'));
-
-q5.draw = function () {
-  circle(mouseX, mouseY, random(55));
+await q.Canvas();
+q.background(q.color('silver'));
+q.draw=function () {
+  q.circle((q as any).mouseX, (q as any).mouseY, q.random(55));
 }
+
